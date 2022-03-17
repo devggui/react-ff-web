@@ -10,7 +10,7 @@ const Header: React.FC = () => {
         <a href='/'>Treinos</a>
         <a href='/'>Campeonatos</a>
         <a href='/'>Contato</a>
-        <a href="/" className="signin">Sign in</a>
+        <a href="/login" className="signin">Sign in</a>
       </Items>
     </Container>
   );

@@ -6,6 +6,7 @@ export const Container = styled.div`
   align-items: center;
   justify-content: space-between; 
   padding: 11px 16px;
+  flex-wrap: wrap;
 
   a {    
     color: white;
@@ -20,4 +21,11 @@ export const Container = styled.div`
 
 export const Items = styled.div`  
   display: flex;
+  flex-wrap: wrap;
+
+  a:hover {
+    color: white;
+    opacity: 0.8;
+    transition: 0.5s;   
+  }
 `;
