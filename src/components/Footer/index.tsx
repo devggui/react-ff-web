@@ -1,10 +1,19 @@
 import React from 'react';
 
-// import { Container } from './styles';
+import { Container, Line } from './styles';
 
 const Footer: React.FC = () => {
   return (
-      <h1>Footer</h1>
+      <Container>
+        <a href="/">Whatsapp</a>
+        <a href="/">Instagram</a>
+        <a href="/">Linkedin</a>
+        <a href="/">Github</a>
+        <a href="/">Facebook</a>
+        <Line />     
+      </Container>
+
+      
   );
 }
 
