@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useState } from 'react';
 
 import { 
   Container, 
@@ -9,18 +9,16 @@ import {
   WhatsLogo,
   LockLogo,
   UserLogo,
-  EnvelopeLogo,
-  ButtonTransparent
+  EnvelopeLogo  
 } from './styles';
 
 const Login: React.FC = () => {
 
-  const handleClickAdd = (event: { target: { classList: { add: (arg0: string) => any; }; }; }) => event.target.classList.add("sign-up-mode");
-  // const handleClickRemove = (event: { target: { classList: { add: (arg0: string) => any; }; }; }) => event.target.classList.remove("sign-up-mode");
+  const [layout, setLayout] = useState('');
 
   return (
     <Container>
-      <div className="container">
+      <div className={`container ${layout}`}>
         <div className="forms-container">
           <div className="signin-signup"> 
             <form action="" className="sign-in-form">            
@@ -64,14 +62,11 @@ const Login: React.FC = () => {
           </div>
         </div>
         
-
         <div className="panels-container">        
           <div className="panel left-panel">
             <div className="content">
               <h3>New here?</h3>
-              <ButtonTransparent>
-                {/* <button onClick={this.handleClickRemove}>Sign up</button> */}
-              </ButtonTransparent>
+              <button className="btn transparent" onClick={e => setLayout(!layout ? 'sign-up-mode' : '')} id="sign-up-btn">Sign up</button>
               <img src="assets/log.svg" className="image" alt="" />  
             </div>
           </div>
@@ -79,15 +74,13 @@ const Login: React.FC = () => {
           <div className="panel right-panel">
             <div className="content">
               <h3>Onde of us?</h3>
-              <ButtonTransparent>
-                {/* <button onClick={this.handleClickAdd()}>Sign in</button> */}
-              </ButtonTransparent>
+              <button className="btn transparent" onClick={e => setLayout(!layout ? '' : '')} id="sign-in-btn">Sign in</button>
               <img src="assets/register.svg" className="image" alt="" />        
             </div>
           </div>        
         </div>
       </div>
-    </Container>         
+    </Container>   
   );
 }
 

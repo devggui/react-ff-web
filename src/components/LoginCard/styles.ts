@@ -24,7 +24,7 @@ export const Container = styled.div`
     width: 2000px;
     height: 2000px;
     border-radius: 50%;
-    background: linear-gradient(-45deg, #4481eb, #04befe, 100%);
+    background: linear-gradient(-45deg, #4481eb, #04befe 100%);
     top: -10%;
     right: 48%;
     transform: translateY(-50%) !important;
@@ -89,6 +89,16 @@ export const Container = styled.div`
       &:hover {
         background-color: #4d84e2;
       }
+    }
+
+    .btn.transparent {
+      margin: 0;
+      background: none;
+      border: 2px solid #fff;
+      width: 130px;
+      height: 41px;
+      font-weight: 600;
+      font-size: 0.8rem;
     }
   }
 
@@ -369,14 +379,3 @@ export const LockLogo = styled(FaLock)``;
 
 export const EnvelopeLogo = styled(FaEnvelope)``;
 
-export const ButtonTransparent = styled.div`
-  button {
-    margin: 0;
-    background: none;
-    border: 2px solid #fff;
-    width: 130px;
-    height: 41px;
-    font-weight: 600;
-    font-size: 0.8rem;
-  }
-`;
